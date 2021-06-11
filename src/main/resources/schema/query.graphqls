@@ -1,0 +1,6 @@
+type Query {
+    """
+    ACL
+    """
+    entityIterationAcl(ownerId: String!): [Acl]
+}

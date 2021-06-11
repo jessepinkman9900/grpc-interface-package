@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package captl.grpc.interfaces;
+
+message Employee {
+    int64 employeeId = 1;
+    string employeeFirstName = 2;
+    string employeeLastName = 3;
+    fixed64 employeeDateOfBirth = 4;
+    float employeeWorkingYears = 5;
+}
+
+service EmployeeService {
+    rpc getEmployee(Employee) returns (Employee) {}
+    rpc getAllEmployeeByIdList(stream Employee) returns (stream Employee) {}
+    rpc getMostExperiencedEmployee(stream Employee) returns (Employee) {}
+}

@@ -1,0 +1,56 @@
+type Acl {
+    id: String
+    objectId: String
+    """
+    oracleId: iteration (iterationId) who set the permissions
+    """
+    oracleId: String
+    """
+    distillerId: iterationId that user (userId) is representing while making this call
+    """
+    distillerId: String
+    to: PermissionTo
+    mask: [FieldPermission]
+}
+
+type PermissionTo {
+    type: PermissionToType
+    meta: String
+}
+
+type FieldPermission {
+    id: String
+    fieldName: FieldName
+    type: PermissionType
+    children: [Acl]
+}
+
+input DistillAclInput {
+    userId: String!
+    """
+    oracleId: iterationId that user (userId) is representing while making this call
+    """
+    oracleId: String!
+    distillerId: String!
+    toIds: [ToIdInput!]!
+    acls: [AclInput]
+}
+
+input ToIdInput {
+    type: PermissionToType
+    meta: String
+}
+
+input AclInput {
+    objectId: String!
+    fieldPermissions: [FieldPermissionInput!]!
+}
+
+input FieldPermissionInput {
+    fieldName: FieldName!
+    type: PermissionType!
+    """
+    children: processed only if type == SPECIFIC
+    """
+    children: [AclInput]
+}

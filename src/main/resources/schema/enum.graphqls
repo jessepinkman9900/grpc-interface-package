@@ -1,0 +1,16 @@
+enum IdType {
+    User
+    EntityIteration
+}
+
+enum PermissionType {
+    READ
+    WRITE
+#    SPECIFIC
+    NONE
+}
+
+enum PermissionToType {
+    EntityIteration
+    Role
+}

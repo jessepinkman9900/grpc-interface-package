@@ -1,0 +1,33 @@
+enum FieldName {
+    """
+    EntityIteration
+    """
+    EI_Name
+    EI_Type
+    EI_Profile
+    EI_Team
+    EI_Investments
+    EI_Investors
+    EI_ServiceProviders
+    EI_Clients
+    EI_Trustees
+
+    EI_Profile_GP_Address
+    EI_Profile_GP_RegistrationNumber
+    EI_Profile_GP_CorpusAmount
+    EI_Profile_GP_IncorporationYear
+
+    EI_Profile_LP_Address
+    EI_Profile_LP_TaxId
+    EI_Profile_LP_Type
+
+    EI_Profile_Portfolio_Address
+    EI_Profile_Portfolio_IndustryVertical
+    EI_Profile_Portfolio_Round
+    EI_Profile_Portfolio_IncorporationYear
+    EI_Profile_Portfolio_QuantumOfInvestment
+    EI_Profile_Portfolio_EquityPercentage
+
+    EI_Profile_SP_Address
+    EI_Profile_SP_Type
+}

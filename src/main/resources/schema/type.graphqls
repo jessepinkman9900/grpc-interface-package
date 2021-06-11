@@ -1,0 +1,9 @@
+type Id {
+    type: IdType
+    id: String
+}
+
+input IdInput {
+    type: IdType!
+    id: String!
+}

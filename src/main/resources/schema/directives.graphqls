@@ -1,0 +1,1 @@
+directive @skipcodegen on FIELD_DEFINITION

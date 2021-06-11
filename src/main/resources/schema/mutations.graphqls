@@ -1,0 +1,12 @@
+type Mutation {
+    """
+    ACL Mutations
+    baseAcl: will be removed once gRPC ready
+    validatedInvite: will be removed once gRPC is ready
+    baseAcl: type: LimitedPartner GeneralPartner ServiceProvider Portfolio Trustee
+    """
+    baseAcl(objectId: String, type: String): [Acl]
+    validatedInvite(objectId: String, objectType: String, distillerId: String, distillerType: String): [Acl]
+    distillAcl(input: DistillAclInput): [Acl]
+    removeAcl(id: String): [Acl]
+}
