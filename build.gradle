@@ -1,6 +1,6 @@
 plugins {
     id "java"
-    id "application"
+    id "java-library"
     id "maven-publish"
     id "com.google.protobuf" version "0.8.16"
 }
@@ -19,13 +19,13 @@ publishing {
 
     publications {
         gpr(MavenPublication) {
-            from(componenets.java)
+            from(components.java)
         }
     }
 }
 
-group = "captl.grpc"
-version = "0.0.1-SNAPSHOT"
+group = "captl.grpc.interface"
+version = "0.0.1"
 sourceCompatibility = JavaVersion.VERSION_15
 
 repositories {
