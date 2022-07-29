@@ -21,7 +21,7 @@
         repositories {
             maven {
                 name = "GithubPackages"
-                url = uri("https://maven.pkg.github.com/jessepinkman9900/interface-test")
+                url = uri("https://maven.pkg.github.com/jessepinkman9900/grpc-interface-package")
                 credentials {
                     username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                     password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
@@ -41,14 +41,14 @@
 - maven
     ```xml
     <dependency>
-      <groupId>captl.grpc.interface</groupId>
+      <groupId>sample.grpc.interface</groupId>
       <artifactId>test</artifactId>
       <version>0.0.2</version>
     </dependency>
     ```
 - gradle
     ```groovy
-    implementation("captl.grpc.interface:test:0.0.2")
+    implementation("sample.grpc.interface:test:0.0.2")
     ```
  - NOTES
     - `groupId` comes from `group` variable in `build.gradle`
