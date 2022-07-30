@@ -25,7 +25,7 @@ publishing {
 }
 
 group = "sample.grpc.interface"
-version = "1.1.0"
+version = "1.2.0"
 sourceCompatibility = JavaVersion.VERSION_15
 
 repositories {
