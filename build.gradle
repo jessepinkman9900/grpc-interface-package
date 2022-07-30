@@ -2,7 +2,7 @@ plugins {
     id "java"
     id "java-library"
     id "maven-publish"
-    id "com.google.protobuf" version "0.8.16"
+    id "com.google.protobuf" version "0.8.19"
 }
 
 publishing {
