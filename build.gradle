@@ -32,7 +32,7 @@ repositories {
     mavenCentral()
 }
 
-def grpcVersion = '1.48.0'
+def grpcVersion = '1.51.0'
 def protobufVersion = '3.17.2'
 def protocVersion = protobufVersion
 
